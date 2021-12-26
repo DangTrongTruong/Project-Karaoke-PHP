@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+    <?php ob_start(); ?>
     <head>
         <meta charset="utf-8">
         <title>Minton - Responsive Admin Dashboard Template</title>
@@ -17,6 +18,8 @@
         <link href="assets\css\bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="assets\css\icons.min.css" rel="stylesheet" type="text/css">
         <link href="assets\css\app.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="assets/css/style.css">
+
 
     </head>
 
@@ -44,18 +47,43 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box">
-                                    <div class="page-title-right">
-                                        <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item active">Loại phòng</li>
-                                        </ol>
-                                    </div>
-                                    <h4 class="page-title">Danh sách loại phòng</h4>
+                                    <h4 class="page-title">Danh sách phòng</h4>
                                 </div>
                             </div>
                         </div>     
                         <!-- end page title --> 
-
-                        
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="./themphong.php" class="btn btn-info">Thêm phòng</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>STT</th>
+                                            <th>ID phòng</th>
+                                            <th>Tên phòng</th>
+                                            <th>Ảnh phòng</th>
+                                            <th>Số lượng người</th>
+                                            <th>Giá phòng</th>
+                                            <th>Lượt xem</th>
+                                            <th>Địa chỉ</th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php danhsach_phong(); ?>
+                                        <?php if (isset($_GET['idphong'])) {
+                                            $idphongxoa = $_GET['idphong'];
+                                           xoaformdatphong2(); xoa_anhchitiet_phong($idphongxoa); xoaphong();
+                                       }  ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
 
                         
                     </div> <!-- container -->

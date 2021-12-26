@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Minton - Responsive Admin Dashboard Template</title>
+        <title>Cpanel KoKo | Tổng quan</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description">
         <meta content="Coderthemes" name="author">
@@ -14,7 +14,8 @@
         <link href="assets\css\bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="assets\css\icons.min.css" rel="stylesheet" type="text/css">
         <link href="assets\css\app.min.css" rel="stylesheet" type="text/css">
-
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     </head>
 
     <body>
@@ -46,11 +47,11 @@
                                 <div class="page-title-box">
                                     <div class="page-title-right">
                                         <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item"><a href="javascript: void(0);">Minton</a></li>
+                                            <li class="breadcrumb-item"><a href="../index.php">KoKo</a></li>
                                             <li class="breadcrumb-item active">Dashboard</li>
                                         </ol>
                                     </div>
-                                    <h4 class="page-title">Welcome !</h4>
+                                    <h4 class="page-title">Thống kê</h4>
                                 </div>
                             </div>
                         </div>     
@@ -60,11 +61,11 @@
                             <div class="col-xl-3 col-md-6">
                                 <div class="card-box">
                                     <div class="float-left" dir="ltr">
-                                        <input data-plugin="knob" data-width="70" data-height="70" data-fgcolor="#7266ba" data-bgcolor="#ebeff2" value="58" data-skin="tron" data-angleoffset="0" data-readonly="true" data-thickness=".15">
+                                    <i style="font-size: 50px;" class="bi bi-bar-chart"></i>
                                     </div>
                                     <div class="text-right">
-                                        <h3 class="mb-1"> 268 </h3>
-                                        <p class="text-muted mb-1">New Customers</p>
+                                        <h3 class="mb-1"> <?php dondatphong_count();?> </h3>
+                                        <p class="text-muted mb-1">Đơn đặt phòng</p>
                                     </div>
                                 </div>
                             </div><!-- end col -->
@@ -72,11 +73,11 @@
                             <div class="col-xl-3 col-md-6">
                                 <div class="card-box">
                                     <div class="float-left" dir="ltr">
-                                        <input data-plugin="knob" data-width="70" data-height="70" data-fgcolor="#f672a7" data-bgcolor="#ebeff2" value="80" data-skin="tron" data-angleoffset="0" data-readonly="true" data-thickness=".15">
+                                    <i style="font-size: 50px;" class="bi bi-person"></i>
                                     </div>
                                     <div class="text-right">
-                                        <h3 class="mb-1"> 8715 </h3>
-                                        <p class="text-muted mb-1">Online Orders</p>
+                                        <h3 class="mb-1"> <?php user_count();?> </h3>
+                                        <p class="text-muted mb-1">Tổng số user</p>
                                     </div>
                                 </div>
                             </div><!-- end col -->
@@ -84,11 +85,11 @@
                             <div class="col-xl-3 col-md-6">
                                 <div class="card-box">
                                     <div class="float-left" dir="ltr">
-                                        <input data-plugin="knob" data-width="70" data-height="70" data-fgcolor="#7266ba" data-bgcolor="#ebeff2" value="77" data-skin="tron" data-angleoffset="0" data-readonly="true" data-thickness=".15">
+                                    <i style="font-size: 50px;" class="bi bi-border-all"></i>
                                     </div>
                                     <div class="text-right">
-                                        <h3 class="mb-1"> $925.78 </h3>
-                                        <p class="text-muted mb-1">Revenue</p>
+                                        <h3 class="mb-1"> <?php phong_count();?> </h3>
+                                        <p class="text-muted mb-1">Tổng số phòng</p>
                                     </div>
                                 </div>
                             </div><!-- end col -->
@@ -96,11 +97,11 @@
                             <div class="col-xl-3 col-md-6">
                                 <div class="card-box">
                                     <div class="float-left" dir="ltr">
-                                        <input data-plugin="knob" data-width="70" data-height="70" data-fgcolor="#f672a7" data-bgcolor="#ebeff2" value="35" data-skin="tron" data-angleoffset="0" data-readonly="true" data-thickness=".15">
+                                    <i style="font-size: 50px;" class="bi bi-building"></i>
                                     </div>
                                     <div class="text-right">
-                                        <h3 class="mb-1"> $78.58 </h3>
-                                        <p class="text-muted mb-1">Daily Average</p>
+                                        <h3 class="mb-1"> <?php cn_count();?> </h3>
+                                        <p class="text-muted mb-1">Tổng số chi nhánh</p>
                                     </div>
                                 </div>
                             </div><!-- end col -->
@@ -127,31 +128,9 @@
                                         </div>
                                     </div>
 
-                                    <h4 class="header-title">Total Revenue</h4>
+                                    <h4 class="header-title">Thời tiết</h4>
 
-                                    <div class="mt-3 text-center">
-                                        <p class="text-muted font-15 font-family-secondary mb-0">
-                                            <span class="mx-2"><i class="mdi mdi-checkbox-blank-circle text-primary"></i> Desktop</span>
-                                            <span class="mx-2"><i class="mdi mdi-checkbox-blank-circle text-pink"></i> Laptop</span>
-                                        </p>
-
-                                        <div id="sparkline1" class="mt-3"></div>
-
-                                        <div class="row mt-3">
-                                            <div class="col-4">
-                                                <p class="text-muted font-15 mb-1 text-truncate">Target</p>
-                                                <h4> $56,214</h4>
-                                            </div>
-                                            <div class="col-4">
-                                                <p class="text-muted font-15 mb-1 text-truncate">Last week</p>
-                                                <h4><i class="fe-arrow-up text-success"></i> $840</h4>
-                                            </div>
-                                            <div class="col-4">
-                                                <p class="text-muted font-15 mb-1 text-truncate">Last Month</p>
-                                                <h4><i class="fe-arrow-down text-danger"></i> $7,845</h4>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <!-- weather widget start --><a target="_blank" href="https://hotelmix.vn/weather/hanoi-19487"><img style="width: 100%; max-height: 295px !important; object-fit: contain;" src="https://w.bookcdn.com/weather/picture/32_19487_1_33_3498db_250_2980b9_ffffff_ffffff_1_2071c9_ffffff_0_6.png?scode=124&domid=1180&anc_id=74605"  alt="booked.net"/></a><!-- weather widget end -->
                                 </div> <!-- end card-box -->
                             </div> <!-- end col -->
 
@@ -173,32 +152,20 @@
                                         </div>
                                     </div>
 
-                                    <h4 class="header-title">Yearly Sales Report</h4>
+                                    <h4 class="header-title">Bình luận mới</h4>
 
-                                    <div class="mt-3 text-center">
-                                        <p class="text-muted font-15 font-family-secondary mb-0">
-                                            <span class="mx-2"><i class="mdi mdi-checkbox-blank-circle text-primary"></i> Revenue</span>
-                                            <span class="mx-2"><i class="mdi mdi-checkbox-blank-circle text-light"></i> Number of Sales</span>
-                                        </p>
-
-                                        <div id="sparkline2" class="text-center mt-3"></div>
-
-                                        <div class="row mt-3">
-                                            <div class="col-4">
-                                                <p class="text-muted font-15 mb-1 text-truncate">Target</p>
-                                                <h4>$8712</h4>
-                                            </div>
-                                            <div class="col-4">
-                                                <p class="text-muted font-15 mb-1 text-truncate">Last week</p>
-                                                <h4><i class="fe-arrow-up text-success"></i> $523</h4>
-                                            </div>
-                                            <div class="col-4">
-                                                <p class="text-muted font-15 mb-1 text-truncate">Last Month</p>
-                                                <h4><i class="fe-arrow-down text-danger"></i> $965</h4>
-                                            </div>
-                                        </div>
-
-                                    </div>
+                                    <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>STT</th>
+                                            <th>Nội dung</th>
+                                            <th>Username</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php binhluanmoinhat(); ?>
+                                    </tbody>
+                                </table>
                                 </div> <!-- end card-box -->
                             </div> <!-- end col -->
 
@@ -220,31 +187,17 @@
                                         </div>
                                     </div>
 
-                                    <h4 class="header-title">Weekly Sales Report</h4>
+                                    <h4 class="header-title">Đơn đặt phòng theo chi nhánh</h4>
 
                                     <div class="mt-3 text-center">
                                         <p class="text-muted font-15 font-family-secondary mb-0">
-                                            <span class="mx-2"><i class="mdi mdi-checkbox-blank-circle text-primary"></i> Direct</span>
-                                            <span class="mx-2"><i class="mdi mdi-checkbox-blank-circle text-pink"></i> Affilliate</span>
-                                            <span class="mx-2"><i class="mdi mdi-checkbox-blank-circle text-muted"></i> Sponsored</span>
+                                            <span class="mx-2"><i class="mdi mdi-checkbox-blank-circle text-primary"></i> Cầu Giấy, Hà Nội</span>
+                                            <span class="mx-2"><i class="mdi mdi-checkbox-blank-circle text-pink"></i> Nam Từ Liêm, Hà Nội</span>
+                                            <span class="mx-2"><i class="mdi mdi-checkbox-blank-circle text-success"></i> Ba Đình - Hà Nội</span>
+                                            <span class="mx-2"><i class="mdi mdi-checkbox-blank-circle text-muted"></i> Bắc Từ Liêm, Hà Nội</span>
                                         </p>
 
                                         <div id="sparkline3" class="text-center mt-3"></div>
-
-                                        <div class="row mt-3">
-                                            <div class="col-4">
-                                                <p class="text-muted font-15 mb-1 text-truncate">Target</p>
-                                                <h4> $12,365</h4>
-                                            </div>
-                                            <div class="col-4">
-                                                <p class="text-muted font-15 mb-1 text-truncate">Last week</p>
-                                                <h4><i class="fe-arrow-down text-danger"></i> $365</h4>
-                                            </div>
-                                            <div class="col-4">
-                                                <p class="text-muted font-15 mb-1 text-truncate">Last Month</p>
-                                                <h4><i class="fe-arrow-up text-success"></i> $8,501</h4>
-                                            </div>
-                                        </div>
 
                                     </div>
                                 </div> <!-- end card-box -->
@@ -258,38 +211,9 @@
                             <div class="col-xl-6">
                                 <div class="card-box">
                                     <div class="row">
-                                        <div class="col-md-7">
-                                            <div class="row align-items-center">
-                                                <div class="col-6 text-center">
-                                                    <h1 class="display-4"><i class="wi wi-day-sleet text-primary"></i></h1>
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="text-muted">
-                                                        <h2 class="mt-1"><b>32°</b></h2>
-                                                        <p>Partly cloudy</p>
-                                                        <p class=" mb-0">15km/h - 37%</p>
-                                                    </div>
-                                                </div>
-                                            </div><!-- End row -->
-                                        </div>
-                                        <div class="col-md-5">
-                                            <div class="row">
-                                                <div class="col-4 text-center">
-                                                    <h4 class="text-muted mt-0">SAT</h4>
-                                                    <h3 class="my-3"><i class="wi wi-night-alt-cloudy text-primary"></i></h3>
-                                                    <h4 class="text-muted mb-0">30<i class="wi wi-degrees"></i></h4>
-                                                </div>
-                                                <div class="col-4 text-center">
-                                                    <h4 class="text-muted mt-0">SUN</h4>
-                                                    <h3 class="my-3"><i class="wi wi-day-sprinkle text-primary"></i></h3>
-                                                    <h4 class="text-muted mb-0">28<i class="wi wi-degrees"></i></h4>
-                                                </div>
-                                                <div class="col-4 text-center">
-                                                    <h4 class="text-muted mt-0">MON</h4>
-                                                    <h3 class="my-3"><i class="wi wi-hot text-primary"></i></h3>
-                                                    <h4 class="text-muted mb-0">33<i class="wi wi-degrees"></i></h4>
-                                                </div>
-                                            </div><!-- end row -->
+                                        <div class="col-md-12">
+                                                <script src="https://widgets.coingecko.com/coingecko-coin-price-chart-widget.js"></script>
+                                                <coingecko-coin-price-chart-widget currency="usd" coin-id="bitcoin" locale="en" height="300"></coingecko-coin-price-chart-widget>
                                         </div>
                                     </div><!-- end row -->
                                 </div><!-- cardbox -->
@@ -298,287 +222,17 @@
                             </div><!-- End col-xl-6 -->
 
                             <div class="col-xl-6">
-
-                                <!-- WEATHER WIDGET 2 -->
                                 <div class="card-box">
-
                                     <div class="row">
-                                        <div class="col-md-7">
-                                            <div class="row align-items-center">
-                                                <div class="col-6 text-center">
-                                                    <h1 class="display-4"><i class="wi wi-night-sprinkle text-pink"></i></h1>
-                                                </div>
-                                                <div class="col-6">
-                                                    <div class="text-muted">
-                                                        <h2 class="mt-1"><b>18°</b></h2>
-                                                        <p>Partly cloudy</p>
-                                                        <p class=" mb-0">15km/h - 37%</p>
-                                                    </div>
-                                                </div>
-                                            </div><!-- End row -->
-                                        </div>
-                                        <div class="col-md-5">
-                                            <div class="row">
-                                                <div class="col-4 text-center">
-                                                    <h4 class="text-muted mt-0">SAT</h4>
-                                                    <h3 class="my-3"><i class="wi wi-day-sprinkle text-pink"></i></h3>
-                                                    <h4 class="text-muted mb-0">30<i class="wi wi-degrees"></i></h4>
-                                                </div>
-                                                <div class="col-4 text-center">
-                                                    <h4 class="text-muted mt-0">SUN</h4>
-                                                    <h3 class="my-3"><i class="wi wi-storm-showers text-pink"></i></h3>
-                                                    <h4 class="text-muted mb-0">28<i class="wi wi-degrees"></i></h4>
-                                                </div>
-                                                <div class="col-4 text-center">
-                                                    <h4 class="text-muted mt-0">MON</h4>
-                                                    <h3 class="my-3"><i class="wi wi-night-alt-cloudy text-pink"></i></h3>
-                                                    <h4 class="text-muted mb-0">33<i class="wi wi-degrees"></i></h4>
-                                                </div>
-                                            </div><!-- end row -->
+                                        <div class="col-md-12">
+                                        <script src="https://widgets.coingecko.com/coingecko-coin-price-chart-widget.js"></script>
+                                        <coingecko-coin-price-chart-widget currency="usd" coin-id="matic-network" locale="en" height="300"></coingecko-coin-price-chart-widget>
                                         </div>
                                     </div><!-- end row -->
-                                </div><!-- card-box -->
-                                <!-- END WEATHER WIDGET 2 -->
+                                </div><!-- cardbox -->
+                                <!-- END Weather WIDGET 1 -->
 
-                            </div><!-- /.col-xl-6 -->
-                        </div>
-
-                        <div class="row">
-                            <div class="col-xl-4">
-                                <div class="card-box">
-                                    <div class="dropdown float-right">
-                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
-                                            <i class="mdi mdi-dots-horizontal"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item">Settings</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item">Download</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item">Upload</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item">Action</a>
-                                        </div>
-                                    </div>
-                                    <h4 class="header-title">Earning Reports</h4>
-                                    <p class="text-muted">1 Mar - 31 Mar Showing Data</p>
-                                    <h2 class="mb-4"><i class="mdi mdi-currency-usd text-primary"></i>25,632.78</h2>
-
-                                    <div class="row mb-4">
-                                        <div class="col-6">
-                                            <p class="text-muted mb-1">This Month</p>
-                                            <h3 class="mt-0 font-20">$120,254 <small class="badge badge-light-success font-13">+15%</small></h3>
-                                        </div>
-
-                                        <div class="col-6">
-                                            <p class="text-muted mb-1">Last Month</p>
-                                            <h3 class="mt-0 font-20">$98,741 <small class="badge badge-light-danger font-13">-5%</small></h3>
-                                        </div>
-                                    </div>
-
-                                    <h5 class="font-16"><i class="mdi mdi-chart-donut text-primary"></i> Weekly Earning Report</h5>
-
-                                    <div class="mt-5">
-                                        <span data-plugin="peity-bar" data-colors="#6c757d,#ebeff2" data-width="100%" data-height="92">5,3,9,6,5,9,7,3,5,2,9,7,2,1,3,5,2,9,7,2,5,3,9,6,5,9,7</span>
-                                    </div>
-
-                                </div> <!-- end card-box -->
-                            </div> <!-- end col -->
-                            <div class="col-xl-8">
-                                <div class="card-box">
-                                    <div class="dropdown float-right">
-                                        <a href="#" class="dropdown-toggle arrow-none card-drop" data-toggle="dropdown" aria-expanded="false">
-                                            <i class="mdi mdi-dots-horizontal"></i>
-                                        </a>
-                                        <div class="dropdown-menu dropdown-menu-right">
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item">Settings</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item">Download</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item">Upload</a>
-                                            <!-- item-->
-                                            <a href="javascript:void(0);" class="dropdown-item">Action</a>
-                                        </div>
-                                    </div>
-                                    <h4 class="header-title mb-3">Revenue History</h4>
-
-                                    <div class="table-responsive">
-                                        <table class="table table-borderless table-hover table-centered m-0">
-
-                                            <thead class="thead-light">
-                                                <tr>
-                                                    <th>Marketplaces</th>
-                                                    <th>Date</th>
-                                                    <th>US Tax Hold</th>
-                                                    <th>Payouts</th>
-                                                    <th>Status</th>
-                                                    <th>Action</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>
-                                                        <h5 class="m-0 font-weight-normal">Themes Market</h5>
-                                                    </td>
-    
-                                                    <td>
-                                                        Oct 15, 2018
-                                                    </td>
-                                                    
-                                                    <td>
-                                                        $125.23
-                                                    </td>
-
-                                                    <td>
-                                                        $5848.68
-                                                    </td>
-    
-                                                    <td>
-                                                        <span class="badge badge-light-warning">Upcoming</span>
-                                                    </td>
-    
-                                                    <td>
-                                                        <a href="javascript: void(0);" class="btn btn-xs btn-secondary"><i class="mdi mdi-pencil"></i></a>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <h5 class="m-0 font-weight-normal">Freelance</h5>
-                                                    </td>
-    
-                                                    <td>
-                                                        Oct 12, 2018
-                                                    </td>
-
-                                                    <td>
-                                                        $78.03
-                                                    </td>
-    
-                                                    <td>
-                                                        $1247.25
-                                                    </td>
-    
-                                                    <td>
-                                                        <span class="badge badge-light-success">Paid</span>
-                                                    </td>
-    
-                                                    <td>
-                                                        <a href="javascript: void(0);" class="btn btn-xs btn-secondary"><i class="mdi mdi-pencil"></i></a>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <h5 class="m-0 font-weight-normal">Share Holding</h5>
-                                                    </td>
-    
-                                                    <td>
-                                                        Oct 10, 2018
-                                                    </td>
-
-                                                    <td>
-                                                        $358.24
-                                                    </td>
-    
-                                                    <td>
-                                                        $815.89
-                                                    </td>
-    
-                                                    <td>
-                                                        <span class="badge badge-light-success">Paid</span>
-                                                    </td>
-    
-                                                    <td>
-                                                        <a href="javascript: void(0);" class="btn btn-xs btn-secondary"><i class="mdi mdi-pencil"></i></a>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <h5 class="m-0 font-weight-normal">Envato's Affiliates</h5>
-                                                    </td>
-    
-                                                    <td>
-                                                        Oct 03, 2018
-                                                    </td>
-
-                                                    <td>
-                                                        $18.78
-                                                    </td>
-    
-                                                    <td>
-                                                        $248.75
-                                                    </td>
-    
-                                                    <td>
-                                                        <span class="badge badge-light-danger">Overdue</span>
-                                                    </td>
-    
-                                                    <td>
-                                                        <a href="javascript: void(0);" class="btn btn-xs btn-secondary"><i class="mdi mdi-pencil"></i></a>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <h5 class="m-0 font-weight-normal">Marketing Revenue</h5>
-                                                    </td>
-    
-                                                    <td>
-                                                        Sep 21, 2018
-                                                    </td>
-
-                                                    <td>
-                                                        $185.36
-                                                    </td>
-    
-                                                    <td>
-                                                        $978.21
-                                                    </td>
-    
-                                                    <td>
-                                                        <span class="badge badge-light-warning">Upcoming</span>
-                                                    </td>
-    
-                                                    <td>
-                                                        <a href="javascript: void(0);" class="btn btn-xs btn-secondary"><i class="mdi mdi-pencil"></i></a>
-                                                    </td>
-                                                </tr>
-
-                                                <tr>
-                                                    <td>
-                                                        <h5 class="m-0 font-weight-normal">Advertise Revenue</h5>
-                                                    </td>
-    
-                                                    <td>
-                                                        Sep 15, 2018
-                                                    </td>
-
-                                                    <td>
-                                                        $29.56
-                                                    </td>
-    
-                                                    <td>
-                                                        $358.10
-                                                    </td>
-    
-                                                    <td>
-                                                        <span class="badge badge-light-success">Paid</span>
-                                                    </td>
-    
-                                                    <td>
-                                                        <a href="javascript: void(0);" class="btn btn-xs btn-secondary"><i class="mdi mdi-pencil"></i></a>
-                                                    </td>
-                                                </tr>
-
-                                            </tbody>
-                                        </table>
-                                    </div> <!-- end .table-responsive-->
-                                </div> <!-- end card-box-->
-                            </div> <!-- end col -->
+                            </div><!-- End col-xl-6 -->
                         </div>
                         <!-- end row -->
                         
@@ -591,7 +245,7 @@
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6">
-                               2016 - 2019 &copy; Minton theme by <a href="">Coderthemes</a> 
+                               2021 &copy; KoKo Karaoke - copyright <a href="">Tiến - Trường - Quyết</a> 
                             </div>
                             <div class="col-md-6">
                                 <div class="text-md-right footer-links d-none d-sm-block">
@@ -789,7 +443,7 @@
             </div> <!-- end slimscroll-menu-->
         </div>
         <!-- /Right-bar -->
-
+        
         <!-- Right bar overlay-->
         <div class="rightbar-overlay"></div>
 
@@ -801,9 +455,13 @@
 
         <!-- Sparkline charts -->
         <script src="assets\libs\jquery-sparkline\jquery.sparkline.min.js"></script>
-
+        <script>
+        $(document).ready(function(){var o,e=function(){$("#sparkline1").sparkline([0,23,43,35,44,45,56,37,40],{type:"line",width:"100%",height:210,chartRangeMax:50,lineColor:"#7266ba",fillColor:"rgba(114,102,186,0.3)",highlightLineColor:"rgba(0,0,0,.1)",highlightSpotColor:"rgba(0,0,0,.2)",maxSpotColor:!1,minSpotColor:!1,spotColor:!1,lineWidth:1}),$("#sparkline1").sparkline([25,23,26,24,25,32,30,24,19],{type:"line",width:"100%",height:"210",chartRangeMax:40,lineColor:"#f672a7",fillColor:"rgba(246, 114, 164, 0.3)",composite:!0,highlightLineColor:"rgba(0,0,0,.1)",highlightSpotColor:"rgba(0,0,0,.2)",maxSpotColor:!1,minSpotColor:!1,spotColor:!1,lineWidth:1}),$("#sparkline2").sparkline([[70,40],[90,50],[100,150],[140,80],[50,90],[80,120],[130,80],[90,70],[80,50],[120,130],[120,100],[140,110]],{type:"bar",height:"210",barWidth:"15",barSpacing:"3",stackedBarColor:["#7266ba","#e3eaef"]}),
+        $("#sparkline3").sparkline([<?php chart_fcn_3();?>,<?php chart_fcn_1();?>,<?php chart_fcn_2();?>,<?php chart_fcn_4();?>],{type:"pie",width:"210",height:"210",sliceColors:["#e3eaef","#7266ba","#f672a7","#1abc9c"]})};e(),
+        $(window).resize(function(i){clearTimeout(o),o=setTimeout(function(){e()},300)})});
+        </script>
         <!-- init js -->
-        <script src="assets\js\pages\dashboard-1.init.js"></script>
+        <!-- <script src="assets\js\pages\dashboard-1.init.js"></script> -->
 
         <!-- App js -->
         <script src="assets\js\app.min.js"></script>

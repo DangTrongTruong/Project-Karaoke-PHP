@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.login_X{
+height: 90vh;
+padding-top: 120px;
+display: block !important;
+background: #212529;
+background-image: url(../image/luoi.svg);
+background-repeat: no-repeat;
+background-size: cover;
+}
+.login_XX{
+    border: 1px solid #fff;
+    border-radius: .5rem;
+    box-shadow: 1px 2px 10px 1px #dadcdd;
+}
+.login_XXX{
+    padding: 2rem 0 4rem 0;
+    border: 1px solid #fff;
+    border-radius: .5rem;
+    box-shadow: 1px 2px 10px 1px #dadcdd;
+}
+.title{
+    text-align: center;
+    padding: 20px 0 20px 0;
+    font-weight: bolder;
+    color: white;
+    
+}
+.title h2{
+    
+    font-size: 50px;
+}
+.item-form{
+    padding: 10px 0 10px 0;
+    text-align: center;
+    position: relative;
+}
+.item-form input{
+width: 90%;
+height: 40px;
+padding-left: 35px;
+
+}
+.item-form i{
+    position: absolute;
+    top: 17px;
+    font-size: 25px;
+    left: 30px;
+}
+.forgot{
+    padding-left: 22px;
+}
+.forgot a{
+    text-decoration: none;
+}
+.submit-form{
+    text-align: center;
+}
+.submit-form input{
+    color: white;
+    font-weight: bolder;
+    border: none;
+    width: 90%;
+    height: 40px;
+    background-color:dodgerblue;
+}
+.sigup-now{
+    padding: 50px 0 50px 0;
+    padding-left: 22px;
+    color: white;
+}
+.sigup-now a{
+    text-decoration: none;
+    
+}
+
+@media (max-width: 575.98px) {
+    .login_XX, .login_XXX{
+        border: none;
+        box-shadow: none;
+    }
+}

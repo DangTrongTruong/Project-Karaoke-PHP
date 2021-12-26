@@ -17,6 +17,7 @@
         <link href="assets\css\bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="assets\css\icons.min.css" rel="stylesheet" type="text/css">
         <link href="assets\css\app.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="assets/css/style.css">
 
     </head>
 
@@ -44,19 +45,44 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="page-title-box">
-                                    <div class="page-title-right">
-                                        <ol class="breadcrumb m-0">
-                                            <li class="breadcrumb-item active">Loại phòng</li>
-                                        </ol>
-                                    </div>
-                                    <h4 class="page-title">Danh sách loại phòng</h4>
+                                    <h4 class="page-title">Quản lý hệ thống</h4>
                                 </div>
                             </div>
                         </div>     
                         <!-- end page title --> 
-
-                        
-
+                        <!-- <div class="card">
+                            <div class="card-body">
+                                <a href="" class="btn btn-info">Thêm</a>
+                            </div>
+                        </div> -->
+                        <?php
+                        $connect = connect_db();
+                        $sql = "SELECT * FROM user1 WHERE username = '$username' AND isAdmin = 2";
+                        $result = mysqli_query($connect,$sql);
+                        if ($result->num_rows>0) {
+                         echo '<div class="card">
+                         <div class="card-body">
+                             <table class="table">
+                                 <thead>
+                                     <tr>
+                                         <th>Logo</th>
+                                         <th>Hotline</th>
+                                         <th>Địa chỉ</th>
+                                         <th>Mail</th>
+                                         <th>Facebook</th>
+                                         <th></th>
+                                         <th></th>
+                                     </tr>
+                                 </thead>
+                                 <tbody>';
+                                      list_hethong();
+                                 echo '</tbody>
+                             </table>
+                         </div>
+                     </div>';
+                        }else{
+                            echo 'Bạn không có quyền truy cập trang này';  
+                        }?>
                         
                     </div> <!-- container -->
 

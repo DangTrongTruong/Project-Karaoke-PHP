@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, Arial;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.owl-stage {
+    height: 350px;
+}
+
+.item {
+    box-shadow: 0 1px 8px rgb(0 2 0 / 40%);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.contai__heading {
+    border-bottom: 1px solid #bababa;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.contai__heading-title{
+    background-color: #212529;
+    color: #e0bd65;
+    padding: 8px 40px 8px 5px;
+    margin-bottom: 0px !important;
+    border-radius: 0 5rem 0 0;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+.contai__body-name,
+.contai__body-place {
+    text-align: center;
+}
+
+.contai__body-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.contai__body-link {
+    margin: 0 auto;
+    padding: 5px 10px;
+    text-decoration: none;
+    border: 1px solid #0000004a;
+    color: #333;
+    border-radius: 15px;
+  
+}
+.contai__body-link:hover {
+    background: #fcca4b;
+    color: black;
+}
+.contai__body-desc {
+    padding: 20px 5px;
+    line-height: 1.5rem;
+}
+
+.contai__body-desc .contai__body-place {
+    margin-bottom: 20px;
+}
+.margin_container{
+    padding: 1.3rem 0;
+}
+.width_codinh{
+    width: 224px !important;
+    height: 149.34px !important;
+}
+
+@media (max-width: 575.98px) { 
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+    .width_codinh{
+        width: 100% !important;
+        height: 100% !important;
+    }
+    .contai__heading-title {
+        padding: 5px 30px 5px 5px;
+        font-size: 14px;
+        line-height: 30px;
+    }
+    .item img{
+        max-height: 210.6px;
+    }
+}
+
+/* // Medium devices (tablets, less than 992px) */
+@media (min-width: 576px) and (max-width: 991.98px) { 
+    .width_codinh{
+        width: 100% !important;
+        height: 250px !important;
+    }
+ }
+
+/* // Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { ... }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) { ... }
+
+// X-Large devices (large desktops, less than 1400px)
+@media (max-width: 1399.98px) { ... }
+
+// XX-Large devices (larger desktops)
+// No media query since the xxl breakpoint has no upper bound on its width */

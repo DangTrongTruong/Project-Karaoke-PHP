@@ -17,6 +17,9 @@
         <link href="assets\css\bootstrap.min.css" rel="stylesheet" type="text/css">
         <link href="assets\css\icons.min.css" rel="stylesheet" type="text/css">
         <link href="assets\css\app.min.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
 
     </head>
 
@@ -26,7 +29,7 @@
         <div id="wrapper">
 
         <!-- Menu start -->
-        <?php include('./navbar.php') ?>
+        <?php include('navbar.php') ?>
             <!-- end Menu -->
 
             <!-- ========== Left Sidebar Start ========== -->
@@ -55,9 +58,45 @@
                         </div>     
                         <!-- end page title --> 
 
-                        
-
-                        
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="form_category.php" class="btn btn-info">Thêm loại phòng</a>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>STT</th>
+                                            <th>ID loại phòng</th>
+                                            <th>Tên loại phòng</th>
+                                            <th>Chi nhánh</th>
+                                            <th></th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>1</td>
+                                            <td>Phòng kara nhảy bay sàn l</td>
+                                            <td>Chi nhánh cầu giấy</td>
+                                            <td>
+                                                <a class="btn btn btn-danger" href="">
+                                                <i class="far fa-trash-alt"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a class="btn btn-info"href="edit_category.php">
+                                                <i class="fas fa-tools"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div> <!-- container -->
 
                 </div> <!-- content -->
